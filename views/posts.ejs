@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+<body>
+    <%- include('partials/header') %>
+ <h3>Liste des publications</h3>
+
+<%for (let index = 0; index < posts.length; index++) {%>
+    <h3><%= posts[index].titre%></h3> 
+    <p><%= posts[index].continue%></p>
+    <br>
+<% } %>
+<br>
+<a href="http://localhost:8080/posts/ajouter">Ajouter</a>
+<a href="http://localhost:8080/posts/exportAll">exportAll</a>
+
+<%- include('partials/footer') %>
+</body>
+</html>
